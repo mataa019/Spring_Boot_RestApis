@@ -10,7 +10,7 @@ public class ScoreController {
     static  Scores scores = new Scores(30,20,10);
 
     @PatchMapping("/scores/wins")
-    public Scores  AssignedValue(@RequestParam("new-value") int newValue){
+    public Scores  AssignedWins(@RequestParam( name="new-value") int newValue){
         scores.wins = newValue;
         return scores;
     }
@@ -51,6 +51,7 @@ public class ScoreController {
             return scores.looses;
         }
     }
+
     /*
     @GetMapping("/scores")
     public  Scores getScore(){
