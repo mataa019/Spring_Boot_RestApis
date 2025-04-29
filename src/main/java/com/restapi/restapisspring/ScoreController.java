@@ -15,6 +15,11 @@ public class ScoreController {
          scores = newScore;
          return scores;
     }
+
+    @DeleteMapping("/scores")
+    public void Deletescore(){
+        scores = null;
+    }
     @PatchMapping("/scores/wins")
     public Scores  AssignedWins(@RequestParam( name="new-value") int newValue){
         scores.wins = newValue;
