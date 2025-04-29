@@ -9,6 +9,12 @@ public class ScoreController {
 
     static  Scores scores = new Scores(30,20,10);
 
+
+    @PutMapping("/scores")
+         public Scores replaceAllScore(@RequestBody  Scores newScore){
+         scores = newScore;
+         return scores;
+    }
     @PatchMapping("/scores/wins")
     public Scores  AssignedWins(@RequestParam( name="new-value") int newValue){
         scores.wins = newValue;
