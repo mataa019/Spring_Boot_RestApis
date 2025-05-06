@@ -25,10 +25,11 @@
            url = "http://localhost:8080/score/tie";
            result= "tie";
        }
-       else if(clientGesture == 'losses'){
-           url = "http://localhost:8080/score/wins";
+        if(clientGesture == 'losses'){
+           url = "http://localhost:8080/score/losses";
            result = "losses";
        }
+        document.getElementById('results').innerHTML = "The result was a"+ result;
     }
 </script>
 
