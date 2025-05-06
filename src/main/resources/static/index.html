@@ -19,14 +19,14 @@
 </body>
 <script>
     playRoshambo = async function(clientGesture){
-       url = "http://localhost:8080/score/wins";
+       url = "http://localhost:8080/scores/wins";
        result = "win";
        if(clientGesture == 'rock'){
-           url = "http://localhost:8080/score/tie";
+           url = "http://localhost:8080/scores/tie";
            result= "tie";
        }
         if(clientGesture == 'scissors'){
-           url = "http://localhost:8080/score/losses";
+           url = "http://localhost:8080/scores/losses";
            result = "losses";
        }
         document.getElementById('results').innerHTML = "The result was a: "+ result;
