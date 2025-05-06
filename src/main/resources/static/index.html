@@ -31,8 +31,7 @@
        }
         try{
             const responce = await fetch( url, {method: "POST"});
-              
-            }
+            const theScore = await responce.json();
         }
         catch (error){
             console.log(error.message);
