@@ -29,6 +29,12 @@
            url = "http://localhost:8080/scores/losses";
            result = "losses";
        }
+        try{
+
+        }
+        catch (error){
+            console.log(error.message);
+        }
         document.getElementById('results').innerHTML = "The result was a: "+ result;
     }
 </script>
