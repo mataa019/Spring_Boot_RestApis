@@ -26,15 +26,15 @@
            result= "ties";
        }
         if(clientGesture == 'scissors'){
-           url = "http://localhost:8080/scores/losses";
-           result = "losses";
+           url = "http://localhost:8080/scores/looses";
+           result = "looses";
        }
         try{
             const response = await fetch( url, {method: "POST"});
             const theScore = await response.json();
 
             document.getElementById('wins').innerHTML = "<br> Wins: </b> " + theScore.wins;
-            document.getElementById('losses').innerHTML = "<br> Losses: </b> "+ theScore.losses;
+            document.getElementById('looses').innerHTML = "<br> Losses: </b> "+ theScore.looses;
             document.getElementById('ties').innerHTML = "<br> Ties: </b> " + theScore.ties;
             document.getElementById('results').innerHTML = "The result was a: "+ result;
         }
