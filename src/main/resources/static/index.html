@@ -22,7 +22,12 @@
        url = "http://localhost:8080/score/wins";
        result = "win";
        if(clientGesture == 'rock'){
-
+           url = "http://localhost:8080/score/tie";
+           result= "tie";
+       }
+       else if(clientGesture == 'losses'){
+           url = "http://localhost:8080/score/wins";
+           result = "losses";
        }
     }
 </script>
