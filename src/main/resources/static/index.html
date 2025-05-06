@@ -32,6 +32,9 @@
         try{
             const responce = await fetch( url, {method: "POST"});
             const theScore = await responce.json();
+
+            document.getElementById('results').innerHTML = "<br> Wins: </b> "+ theScore.wins;
+
         }
         catch (error){
             console.log(error.message);
