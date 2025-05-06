@@ -30,8 +30,8 @@
            result = "losses";
        }
         try{
-            const responce = await fetch( url, {method: "POST"});
-            const theScore = await responce.json();
+            const response = await fetch( url, {method: "POST"});
+            const theScore = await response.json();
 
             document.getElementById('wins').innerHTML = "<br> Wins: </b> " + theScore.wins;
             document.getElementById('losses').innerHTML = "<br> Losses: </b> "+ theScore.losses;
